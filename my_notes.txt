@@ -1,0 +1,39 @@
+A professional workflow of creating React App
+Reference: React Node.js MySQL Full Stack Blog App Tutorial by Lama Dev @ YouTube
+
+--------FRONT END--------
+前端网页的总流程：放元素，确定逻辑，style，
+1-Create React App
+2-Create Route, use placeholders to test if the routes work
+    2.1-Use react-router-dom's <Outlet> in parent route elements (e.g. navbar, footer) to render their child route elements
+    2.2-Use sass to style, in style.scss file. (solution to TypeError:https://exerror.com/cannot-find-module-sass-in-reactjs/ redo npm start after installing sass globally)
+        结构非常清楚，但code-reuse不太好
+3-Style the login page and register page
+    3.1-Error message
+4-Navbar
+    4.1-Decide the elements
+    4.2-Style
+    4.3-Links: use react-router-dom's Link, inside which filter the categories: /?cat=art
+5-Same for footer
+6-Posts
+    6.1-Use map function to loop through each post and render
+    6.2-For each post, render its attributes separately  //TODO <Link className='link' to={'/post/${post.id}'}> why dollar sign?
+7-Single post (mainly styling)
+    7.1-Image
+    7.2-User info, edit & delete buttons
+    7.3-Content
+8-Menu component
+    8.1-Dummy Posts
+    8.2-styling
+9-Write page
+    9.1-Use react-quill's ReactQuill to provide rich-text editor
+    9.2-Publish, post status & visibility
+    9.3-Upload file: use label to introduce the 'upload file' input which is otherwise hidden. To do this, assign the same value for input's id attribute and label's htmlFor attribute.
+
+--------BACK END--------
+1-
+
+
+--------Miscellaneous Notes--------
+- VSC auto suggestion: type 'fz16' to select 'font-size:16px;'
+- images can only be exported in the format of: import defaultExport from "module-name"; since one image has only one thing to exported
